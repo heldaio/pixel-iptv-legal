@@ -1,0 +1,136 @@
+/* myIPTV legal pages — minimal dark theme, no trackers, no external deps. */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+    background: #1C1C1E;
+    color: #E5E5E7;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+header .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+header .brand-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background: linear-gradient(135deg, #80D900 0%, #5BAA00 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #1C1C1E;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.lang-toggle {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background: #2C2C2E;
+    border-radius: 10px;
+}
+
+.lang-toggle button {
+    background: transparent;
+    border: 0;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 6px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.lang-toggle button.active {
+    background: #80D900;
+    color: #1C1C1E;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    margin-bottom: 32px;
+}
+
+h2 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    margin: 28px 0 10px;
+}
+
+p, li {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 12px;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+li { margin-bottom: 6px; }
+
+a {
+    color: #80D900;
+    text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    text-align: center;
+}
+
+footer a { color: rgba(255, 255, 255, 0.6); }
+
+[lang="pt"] { display: none; }
+[data-lang="pt"] [lang="pt"] { display: block; }
+[data-lang="pt"] [lang="en"] { display: none; }
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+    body { padding: 20px 16px 60px; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 15px; }
+    p, li { font-size: 15px; }
+}
