@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>myIPTV — Legal</title>
-<meta name="description" content="myIPTV — Privacy Policy and Terms of Use">
-<link rel="stylesheet" href="./shared.css">
+<title>Pixel IPTV — Legal</title>
+<meta name="description" content="Pixel IPTV — Privacy Policy and Terms of Use">
+<link rel="stylesheet" href="_shared.css">
 </head>
 <body>
 
 <header>
     <a class="brand" href="./">
-        <span class="brand-mark">m</span>
-        <span>myIPTV</span>
+        <span class="brand-mark">P</span>
+        <span>Pixel IPTV</span>
     </a>
     <div class="lang-toggle" role="tablist">
         <button class="active" onclick="setLang('en')">EN</button>
@@ -21,33 +21,33 @@
 </header>
 
 <section lang="en">
-    <h1>myIPTV</h1>
+    <h1>Pixel IPTV</h1>
     <p class="subtitle">Legal documents</p>
-    <p>myIPTV is a personal IPTV media player. We do not provide, distribute, or host any audiovisual content. The app plays only the sources you add yourself.</p>
+    <p>Pixel IPTV is a personal IPTV media player. We do not provide, distribute, or host any audiovisual content. The app plays only the sources you add yourself.</p>
     <h2>Documents</h2>
     <ul>
         <li><a href="terms.html">Terms of Use</a></li>
         <li><a href="privacy.html">Privacy Policy</a></li>
     </ul>
     <h2>Contact</h2>
-    <p><a href="mailto:support@hdaio.com">support@hdaio.com</a></p>
+    <p><a href="mailto:helder.daio@gmail.com">helder.daio@gmail.com</a></p>
 </section>
 
 <section lang="pt">
-    <h1>myIPTV</h1>
+    <h1>Pixel IPTV</h1>
     <p class="subtitle">Documentos legais</p>
-    <p>myIPTV é um leitor de IPTV pessoal. Não fornecemos, distribuímos nem alojamos qualquer conteúdo audiovisual. A aplicação reproduz apenas as fontes que tu próprio adicionas.</p>
+    <p>Pixel IPTV é um leitor de IPTV pessoal. Não fornecemos, distribuímos nem alojamos qualquer conteúdo audiovisual. A aplicação reproduz apenas as fontes que tu próprio adicionas.</p>
     <h2>Documentos</h2>
     <ul>
         <li><a href="terms.html">Termos de Utilização</a></li>
         <li><a href="privacy.html">Política de Privacidade</a></li>
     </ul>
     <h2>Contacto</h2>
-    <p><a href="mailto:support@hdaio.com">support@hdaio.com</a></p>
+    <p><a href="mailto:helder.daio@gmail.com">helder.daio@gmail.com</a></p>
 </section>
 
 <footer>
-    &copy; <span id="y"></span> myIPTV · <a href="mailto:support@hdaio.com">support@hdaio.com</a>
+    &copy; <span id="y"></span> Pixel IPTV · <a href="mailto:helder.daio@gmail.com">helder.daio@gmail.com</a>
 </footer>
 
 <script>
@@ -57,11 +57,11 @@ function setLang(l) {
     document.querySelectorAll('.lang-toggle button').forEach(b =>
         b.classList.toggle('active', b.textContent.toLowerCase() === l)
     );
-    try { localStorage.setItem('myiptv-lang', l); } catch (_) {}
+    try { localStorage.setItem('pixel-iptv-lang', l); } catch (_) {}
 }
 (function () {
     var saved;
-    try { saved = localStorage.getItem('myiptv-lang'); } catch (_) {}
+    try { saved = localStorage.getItem('pixel-iptv-lang'); } catch (_) {}
     if (saved === 'pt') setLang('pt');
     document.getElementById('y').textContent = new Date().getFullYear();
 }());

@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terms of Use — myIPTV</title>
-<meta name="description" content="myIPTV — Terms of Use">
-<link rel="stylesheet" href="./shared.css">
+<title>Terms of Use — Pixel IPTV</title>
+<meta name="description" content="Pixel IPTV — Terms of Use">
+<link rel="stylesheet" href="_shared.css">
 </head>
 <body>
 
 <header>
     <a class="brand" href="./">
-        <span class="brand-mark">m</span>
-        <span>myIPTV</span>
+        <span class="brand-mark">P</span>
+        <span>Pixel IPTV</span>
     </a>
     <div class="lang-toggle" role="tablist">
         <button class="active" onclick="setLang('en')">EN</button>
@@ -26,7 +26,7 @@
     <p class="subtitle">Last updated: 2026</p>
 
     <h2>1. Nature of the app</h2>
-    <p>myIPTV is a media player. It is not a television service. We do not provide, distribute, or host channels, movies, series, or any other audiovisual content. The app plays only the media sources (M3U, Xtream Codes, or local files) that the user voluntarily adds.</p>
+    <p>Pixel IPTV is a media player. It is not a television service. We do not provide, distribute, or host channels, movies, series, or any other audiovisual content. The app plays only the media sources (M3U, Xtream Codes, or local files) that the user voluntarily adds.</p>
 
     <h2>2. User responsibility</h2>
     <p>You are solely responsible for:</p>
@@ -47,7 +47,7 @@
     <p>We may update these terms. The version in force is always the one displayed in this page and in the in-app Terms screen of the installed version of the app.</p>
 
     <h2>6. Contact</h2>
-    <p><a href="mailto:support@hdaio.com">support@hdaio.com</a></p>
+    <p><a href="mailto:helder.daio@gmail.com">helder.daio@gmail.com</a></p>
 </section>
 
 <!-- ============================== PORTUGUÊS ============================ -->
@@ -56,7 +56,7 @@
     <p class="subtitle">Última actualização: 2026</p>
 
     <h2>1. Natureza da aplicação</h2>
-    <p>myIPTV é um leitor multimédia. Não é um serviço de televisão. Não fornecemos, distribuímos ou alojamos canais, filmes, séries ou qualquer outro conteúdo audiovisual. A aplicação reproduz exclusivamente fontes de média (M3U, Xtream Codes ou ficheiros locais) que o utilizador adiciona voluntariamente.</p>
+    <p>Pixel IPTV é um leitor multimédia. Não é um serviço de televisão. Não fornecemos, distribuímos ou alojamos canais, filmes, séries ou qualquer outro conteúdo audiovisual. A aplicação reproduz exclusivamente fontes de média (M3U, Xtream Codes ou ficheiros locais) que o utilizador adiciona voluntariamente.</p>
 
     <h2>2. Responsabilidade do utilizador</h2>
     <p>És inteiramente responsável por:</p>
@@ -77,11 +77,11 @@
     <p>Podemos atualizar estes termos. A versão em vigor é sempre a apresentada nesta página e no ecrã de Termos in-app da versão instalada da app.</p>
 
     <h2>6. Contacto</h2>
-    <p><a href="mailto:support@hdaio.com">support@hdaio.com</a></p>
+    <p><a href="mailto:helder.daio@gmail.com">helder.daio@gmail.com</a></p>
 </section>
 
 <footer>
-    <a href="./">Home</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:support@hdaio.com">support@hdaio.com</a>
+    <a href="./">Home</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:helder.daio@gmail.com">helder.daio@gmail.com</a>
 </footer>
 
 <script>
@@ -91,11 +91,11 @@ function setLang(l) {
     document.querySelectorAll('.lang-toggle button').forEach(b =>
         b.classList.toggle('active', b.textContent.toLowerCase() === l)
     );
-    try { localStorage.setItem('myiptv-lang', l); } catch (_) {}
+    try { localStorage.setItem('pixel-iptv-lang', l); } catch (_) {}
 }
 (function () {
     var saved;
-    try { saved = localStorage.getItem('myiptv-lang'); } catch (_) {}
+    try { saved = localStorage.getItem('pixel-iptv-lang'); } catch (_) {}
     if (saved === 'pt') setLang('pt');
 }());
 </script>
