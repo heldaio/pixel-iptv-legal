@@ -83,8 +83,7 @@
   <li><strong>Your IPTV provider</strong> — the M3U/Xtream URLs you enter point at servers operated by third parties. We have no relationship with them. Connection is direct from your device.</li>
   <li><strong>Apple iCloud</strong> — Key-Value Storage for the sync items listed above. Subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
   <li><strong>TMDB</strong> (<a href="https://www.themoviedb.org/">themoviedb.org</a>) — used for movie/series metadata only if you supply your own API key. Subject to <a href="https://www.themoviedb.org/terms-of-use">TMDB's terms</a>.</li>
-  <li><strong>OMDB</strong> (<a href="https://www.omdbapi.com/">omdbapi.com</a>) — used for IMDb/Rotten Tomatoes/Metacritic ratings, when enabled. Requests are proxied through our Cloudflare Worker which does not log request bodies.</li>
-  <li><strong>TVDB</strong> (<a href="https://thetvdb.com/">thetvdb.com</a>) — alternative metadata source. Proxied through our Cloudflare Worker.</li>
+  <li><strong>TVDB</strong> (<a href="https://thetvdb.com/">thetvdb.com</a>) — default metadata source for posters, synopses, and cast. Proxied through our Cloudflare Worker which does not log request bodies.</li>
   <li><strong>Trakt.tv</strong> (<a href="https://trakt.tv/">trakt.tv</a>) — only if you connect your Trakt account. Watch progress is sent to Trakt under your account. Subject to <a href="https://trakt.tv/privacy">Trakt's Privacy Policy</a>.</li>
   <li><strong>IPTV-Org</strong> — channel logos are fetched from their public CDN. They may see your IP address as part of standard HTTP delivery.</li>
 </ul>
@@ -170,8 +169,7 @@ Email: <a href="mailto:support@hdaio.com">support@hdaio.com</a></p>
   <li><strong>O teu provedor de IPTV</strong> — os URLs M3U/Xtream que introduzes apontam para servidores operados por terceiros. Não temos qualquer relação com eles. A ligação é direta do teu dispositivo.</li>
   <li><strong>Apple iCloud</strong> — Key-Value Storage para os itens listados acima. Sujeito à <a href="https://www.apple.com/legal/privacy/">Política de Privacidade da Apple</a>.</li>
   <li><strong>TMDB</strong> (<a href="https://www.themoviedb.org/">themoviedb.org</a>) — usado para metadata de filmes/séries apenas se forneceres a tua API key. Sujeito aos <a href="https://www.themoviedb.org/terms-of-use">termos do TMDB</a>.</li>
-  <li><strong>OMDB</strong> (<a href="https://www.omdbapi.com/">omdbapi.com</a>) — usado para ratings IMDb/Rotten Tomatoes/Metacritic, quando ativado. Pedidos passam pelo nosso Cloudflare Worker que não regista conteúdos dos pedidos.</li>
-  <li><strong>TVDB</strong> (<a href="https://thetvdb.com/">thetvdb.com</a>) — fonte alternativa de metadata. Proxied através do nosso Cloudflare Worker.</li>
+  <li><strong>TVDB</strong> (<a href="https://thetvdb.com/">thetvdb.com</a>) — fonte de metadata por defeito para cartazes, sinopses e elenco. Proxied através do nosso Cloudflare Worker que não regista conteúdos dos pedidos.</li>
   <li><strong>Trakt.tv</strong> (<a href="https://trakt.tv/">trakt.tv</a>) — apenas se ligares a tua conta Trakt. O progresso é enviado ao Trakt sob a tua conta. Sujeito à <a href="https://trakt.tv/privacy">Política de Privacidade do Trakt</a>.</li>
   <li><strong>IPTV-Org</strong> — os logos dos canais são obtidos do CDN público deles. Podem ver o teu IP no decurso de entrega HTTP normal.</li>
 </ul>
