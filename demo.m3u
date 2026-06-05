@@ -1,0 +1,16 @@
+#EXTM3U
+# Pixel IPTV — App Review demo playlist.
+# 100% license-clean: public-domain (NASA TV) + Creative Commons BY
+# (Blender Foundation open movies). No third-party / broadcaster content.
+
+#EXTINF:-1 tvg-id="NASA.us" tvg-name="NASA TV Public" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" group-title="Live",NASA TV (Public Domain)
+https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8
+
+#EXTINF:-1 tvg-name="Big Buck Bunny" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c5/Big_buck_bunny_poster_big.jpg" group-title="Movies",Big Buck Bunny
+https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4
+
+#EXTINF:-1 tvg-name="Sintel" group-title="Movies",Sintel
+https://archive.org/download/Sintel/sintel-2048-surround_512kb.mp4
+
+#EXTINF:-1 tvg-name="Elephants Dream" group-title="Movies",Elephants Dream
+https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4
