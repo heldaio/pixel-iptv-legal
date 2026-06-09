@@ -6,6 +6,9 @@
 #EXTINF:-1 tvg-id="NASA.us" tvg-name="NASA TV Public" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" group-title="Live",NASA TV (Public Domain)
 https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8
 
+#EXTINF:-1 tvg-id="TV1.us" tvg-name="TV 1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" group-title="Live",TV 1
+https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8
+
 #EXTINF:-1 tvg-name="Big Buck Bunny" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c5/Big_buck_bunny_poster_big.jpg" group-title="Movies",Big Buck Bunny
 https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4
 
