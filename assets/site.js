@@ -13,9 +13,10 @@ window.PIXEL_SITE = {
   server: {
     version: '1.0',
     // Docker image name shown in the compose examples on server.html.
-    // Empty until the image is pushed to a registry (none chosen yet): the
-    // page keeps the «build it yourself» note while this is empty.
-    dockerImage: '',
+    // Published 2026-10-31 on GitHub Container Registry (linux/amd64 +
+    // linux/arm64, also tagged :latest). Empty: the page shows the
+    // «not published yet» note instead.
+    dockerImage: 'ghcr.io/heldaio/pixel-server:1.0',
     // Every file lives flat in downloads/ next to server.html, served at
     // https://www.pixeliptv.pt/downloads/<file>. A button stays «Em breve» /
     // "Coming soon" while its url is empty. size is what people read
