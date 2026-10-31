@@ -4,7 +4,9 @@
    DOWNLOADS — the only place to edit when Pixel Server is published.
    A download button stays disabled ("Em breve" / "Coming soon") until
    its `url` is filled in. `size` is shown as written (e.g. "21 MB");
-   `sha256` is the file's SHA-256 in hex (shasum -a 256 <file>).
+   `sha256` is the file's SHA-256 in hex (shasum -a 256 <file>): kept here
+   for the record, not shown on the page (the owner's choice, 2026-10-31);
+   setup.sh checks the Linux tarballs against their published .sha256.
    =================================================================== */
 window.PIXEL_SITE = {
   appStoreURL: 'https://apps.apple.com/app/id6773107337',
@@ -440,7 +442,6 @@ window.PIXEL_SITE = {
       var d = cfg.downloads[k];
       if (!d || !d.url) return;
       var line = '<span>' + esc(d.file) + (d.size ? ' · ' + esc(d.size) : '') + '</span>';
-      if (d.sha256) line += '<span>SHA-256 <code>' + esc(d.sha256) + '</code></span>';
       html += line;
     });
     box.innerHTML = html;
