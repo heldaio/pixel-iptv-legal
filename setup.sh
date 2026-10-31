@@ -23,7 +23,7 @@
 set -eu
 
 VERSION=1.0
-DOWNLOADS="${PIXEL_DOWNLOADS:-https://www.pixeliptv.pt/downloads}"
+DOWNLOADS="${PIXEL_DOWNLOADS:-https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.0}"
 
 PREFIX=/opt/pixel-server
 ETC=/etc/pixel-server
