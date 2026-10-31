@@ -19,10 +19,10 @@ window.PIXEL_SITE = {
     // "Coming soon" while its url is empty. size is what people read
     // (MiB, rounded); sha256 is of the published file itself.
     downloads: {
-      // Mac (Apple silicon, macOS 14+), menu-bar app. Empty until a DMG
-      // signed with Developer ID and notarized exists
-      // (PixelServer/Mac/make-dmg.sh with DEVELOPER_ID and NOTARY_PROFILE).
-      macos:        { url: '', size: '', sha256: '', file: 'PixelServer-1.0.dmg' },
+      // Mac (Apple silicon, macOS 14+), menu-bar app. Built 2026-10-31 by
+      // PixelServer/Mac/make-dmg.sh: Developer ID, notarized and stapled
+      // (5 753 123 bytes).
+      macos:        { url: 'https://www.pixeliptv.pt/downloads/PixelServer-1.0.dmg', size: '5 MB', sha256: 'f647158a4a0409b6dac842f28477c3c877aac91f75661bc24c62f9e1d4082d06', file: 'PixelServer-1.0.dmg' },
       // Windows 10 (1903+) / 11 installers, built 2026-10-31 by
       // PixelServer/Windows/build.ps1 (Inno Setup; not Authenticode-signed yet).
       // x64 21 731 473 bytes, arm64 20 855 791 bytes.
