@@ -11,21 +11,34 @@ window.PIXEL_SITE = {
   server: {
     version: '1.0',
     // Docker image name shown in the compose examples on server.html.
-    // PLACEHOLDER until the image is published to a registry.
+    // Empty until the image is pushed to a registry (none chosen yet): the
+    // page keeps the «build it yourself» note while this is empty.
     dockerImage: '',
+    // Every file lives flat in downloads/ next to server.html, served at
+    // https://www.pixeliptv.pt/downloads/<file>. A button stays «Em breve» /
+    // "Coming soon" while its url is empty. size is what people read
+    // (MiB, rounded); sha256 is of the published file itself.
     downloads: {
-      // Mac (Apple silicon, macOS 14+), menu-bar app.
+      // Mac (Apple silicon, macOS 14+), menu-bar app. Empty until a DMG
+      // signed with Developer ID and notarized exists
+      // (PixelServer/Mac/make-dmg.sh with DEVELOPER_ID and NOTARY_PROFILE).
       macos:        { url: '', size: '', sha256: '', file: 'PixelServer-1.0.dmg' },
-      // Windows 10 (1903+) / 11 installers.
-      // Built 2026-10-20: x64 21 644 133 bytes, arm64 20 753 864 bytes —
-      // re-check size and SHA-256 on the build you actually publish.
-      windowsX64:   { url: '', size: '', sha256: '', file: 'PixelServer-1.0-windows-x64.exe' },
-      windowsArm64: { url: '', size: '', sha256: '', file: 'PixelServer-1.0-windows-arm64.exe' },
-      // Linux (systemd), from PixelServer/Docker/make-tarball.sh. Publish its
-      // dist/setup.sh (PIXEL_DOWNLOADS filled in) next to server.html too:
-      // the page's one-command install runs it.
-      linuxAmd64:   { url: '', size: '', sha256: '', file: 'pixel-server-1.0-linux-amd64.tar.gz' },
-      linuxArm64:   { url: '', size: '', sha256: '', file: 'pixel-server-1.0-linux-arm64.tar.gz' }
+      // Windows 10 (1903+) / 11 installers, built 2026-10-31 by
+      // PixelServer/Windows/build.ps1 (Inno Setup; not Authenticode-signed yet).
+      // x64 21 731 473 bytes, arm64 20 855 791 bytes.
+      windowsX64:   { url: 'https://www.pixeliptv.pt/downloads/PixelServer-1.0-windows-x64.exe', size: '21 MB',
+                      sha256: 'a2037fe74e904478a50c5df3eb1849b24ecf52e38ce205b6bda7509788480259', file: 'PixelServer-1.0-windows-x64.exe' },
+      windowsArm64: { url: 'https://www.pixeliptv.pt/downloads/PixelServer-1.0-windows-arm64.exe', size: '20 MB',
+                      sha256: 'c577ff66f7d8839ba352b06d71f0c77ab180a16638be8086a4b700c61f33e205', file: 'PixelServer-1.0-windows-arm64.exe' },
+      // Linux (systemd), built 2026-10-31 by
+      // PIXEL_PUBLISH_URL=https://www.pixeliptv.pt/downloads PixelServer/Docker/make-tarball.sh
+      // amd64 28 259 710 bytes, arm64 27 000 825 bytes. Its dist/setup.sh is
+      // published as /setup.sh (the page's one-command install) and fetches
+      // downloads/<file> plus downloads/<file>.sha256 — keep both published.
+      linuxAmd64:   { url: 'https://www.pixeliptv.pt/downloads/pixel-server-1.0-linux-amd64.tar.gz', size: '27 MB',
+                      sha256: '4e9441561b3b7ef2e3b9409e1aa1f5e3885d589c70b24a28ef351a0202b8732f', file: 'pixel-server-1.0-linux-amd64.tar.gz' },
+      linuxArm64:   { url: 'https://www.pixeliptv.pt/downloads/pixel-server-1.0-linux-arm64.tar.gz', size: '26 MB',
+                      sha256: '82e462dae4201bd491475034090e4bee4fff7db52c9de39d22b4519f715c1b1d', file: 'pixel-server-1.0-linux-arm64.tar.gz' }
     }
   }
 };
