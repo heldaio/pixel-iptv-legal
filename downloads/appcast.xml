@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Pixel Server</title>
+        <item>
+            <title>1.0</title>
+            <pubDate>Sat, 31 Oct 2026 23:04:21 +0000</pubDate>
+            <link>https://www.pixeliptv.pt/server.html</link>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://www.pixeliptv.pt/downloads/PixelServer-1.0.dmg" length="5752818" type="application/octet-stream" sparkle:edSignature="Fc0ezD6qVop2cQRka+v/3xq9i0++FpMVTjVUARv/Lb6NJ783L8f721WL9n8vVlA5G+9aX+kLoHTJfwj6eW+ZBA=="/>
+        </item>
+    </channel>
+</rss>

@@ -21,8 +21,9 @@ window.PIXEL_SITE = {
     downloads: {
       // Mac (Apple silicon, macOS 14+), menu-bar app. Built 2026-10-31 by
       // PixelServer/Mac/make-dmg.sh: Developer ID, notarized and stapled
-      // (5 753 123 bytes).
-      macos:        { url: 'https://www.pixeliptv.pt/downloads/PixelServer-1.0.dmg', size: '5 MB', sha256: 'f647158a4a0409b6dac842f28477c3c877aac91f75661bc24c62f9e1d4082d06', file: 'PixelServer-1.0.dmg' },
+      // (5 752 818 bytes). Updates: downloads/appcast.xml (Sparkle, signed
+      // with the EdDSA key in the developer's keychain; generate_appcast).
+      macos:        { url: 'https://www.pixeliptv.pt/downloads/PixelServer-1.0.dmg', size: '5 MB', sha256: 'dac43cef24db732f0ccac7e5fb0b0ecd6d4f3c9e905b6c4b177afba9b0f43a1d', file: 'PixelServer-1.0.dmg' },
       // Windows 10 (1903+) / 11 installers, built 2026-10-31 by
       // PixelServer/Windows/build.ps1 (Inno Setup; not Authenticode-signed yet).
       // x64 21 731 473 bytes, arm64 20 855 791 bytes.
