@@ -803,6 +803,9 @@ html.js .live-row:not(.static) .row-viewport { overflow: hidden; }
 .peek .dev { box-shadow: inset 0 1px 0 var(--bezel-edge), 0 0 0 1px var(--bezel-edge); }
 @media (max-width: 759.98px) { .tiles { grid-template-columns: 1fr; } .tile { padding: 32px 24px; } .peek { margin-bottom: -32px; } }
 
+/* The wording used only while Pixel Server is hidden (end of file). */
+.ps-alt { display: none; }
+
 /* ---------- notes */
 .notes { background: var(--bg-2); padding: 48px 0 44px; font-size: 13px; line-height: 1.55; color: var(--text-3); border-top: 1px solid var(--line); }
 .notes ol { list-style: decimal; padding-left: 1.4em; display: grid; gap: 10px; max-width: 920px; }
@@ -1102,3 +1105,11 @@ details.more > div { display: flex; flex-direction: column; gap: 10px; padding-b
   .site-header, .site-footer, .menu-btn, .river-wrap, .shelf-controls { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/* ---------- Pixel Server hidden until 2.5 is on sale (README, «Before
+   publishing»). Launch day: delete this block. `.ps` marks every link,
+   section and phrase about it; `.ps-alt` is the wording used meanwhile. */
+.ps { display: none !important; }
+.ps-alt { display: inline !important; }
+.tiles:has(> .tile.ps) { grid-template-columns: minmax(0, 580px); justify-content: center; }
+/* ---------- end of the Pixel Server block */

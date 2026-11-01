@@ -1,58 +1,25 @@
 #EXTM3U
 # Pixel IPTV — App Review demo playlist.
-# 100% license-clean: public-domain (NASA TV) + Creative Commons BY
-# (Blender Foundation open movies). No third-party / broadcaster content.
+# License-clean: the movies are Blender Foundation open movies (CC BY); the
+# live channel is Unified Streaming's public live demo stream (a test card
+# with a running clock). No broadcaster content. (The NASA TV streams of
+# earlier versions are gone: NASA TV moved to NASA+.)
+# Every address checked on 2026-11-01; check again on the day of a submission.
 
-#EXTINF:-1 tvg-id="NASA.us" tvg-name="NASA TV Public" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" group-title="Live",NASA TV (Public Domain)
-https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8
-
-#EXTINF:-1 tvg-id="TV1.us" tvg-name="TV 1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" group-title="Live",TV 1
-https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master1.m3u8
-
-#EXTINF:-1 tvg-id="TV2.us" tvg-name="TV 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" group-title="Live",TV 21
-https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master2.m3u8
-
-#EXTINF:-1 tvg-id="TV3.us" tvg-name="TV 3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" group-title="Live",TV 3
-https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master3.m3u8
-
-#EXTINF:-1 tvg-id="TV4.us" tvg-name="TV 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" group-title="Live",TV 4
-https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master4.m3u8
-
-#EXTINF:-1 tvg-id="TV5.us" tvg-name="TV 5" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" group-title="Live",TV 5
-https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master5.m3u8
+#EXTINF:-1 tvg-id="LiveTest" tvg-name="Live Test Stream" group-title="Live",Live Test Stream
+https://demo.unified-streaming.com/k8s/live/stable/live.isml/.m3u8
 
 #EXTINF:-1 tvg-name="Big Buck Bunny" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c5/Big_buck_bunny_poster_big.jpg" group-title="Movies",Big Buck Bunny
 https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4
 
-#EXTINF:-1 tvg-name="Sintel" group-title="Movies",Sintel
+#EXTINF:-1 tvg-name="Sintel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8f/Sintel_poster.jpg" group-title="Movies",Sintel
 https://archive.org/download/Sintel/sintel-2048-surround_512kb.mp4
 
 #EXTINF:-1 tvg-name="Elephants Dream" group-title="Movies",Elephants Dream
-https://archive.org/download/ElephantsDream/ed_1024_513kb.mp4
-
-#EXTINF:-1 tvg-name="Sample" group-title="Movies",Sample
 https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4
 
-#EXTINF:-1 tvg-name="Sample 1" group-title="Movies",Sample 1
-https://archive.org/download/ElephantsDream/ed_1024_712kb.mp4
+#EXTINF:-1 tvg-name="Tears of Steel" group-title="Movies",Tears of Steel
+https://archive.org/download/Tears-of-Steel/tears_of_steel_720p.mp4
 
-#EXTINF:-1 tvg-name="Sample 2" group-title="Movies",Sample 2
-https://archive.org/download/ElephantsDream/ed_1024_812kb.mp4
-
-#EXTINF:-1 tvg-name="Sample 3" group-title="Movies",Sample 3
-https://archive.org/download/ElephantsDream/ed_1024_912kb.mp4
-
-#EXTINF:-1 tvg-name="Sample 4" group-title="Movies",Sample 4
-https://archive.org/download/ElephantsDream/ed_1024_1012kb.mp4
-
-#EXTINF:-1 tvg-name="Sample 5" group-title="Movies",Sample 5
-https://archive.org/download/ElephantsDream/ed_1024_1112kb.mp4
-
-#EXTINF:-1 tvg-name="Sample 6" group-title="Movies",Sample 6
-https://archive.org/download/ElephantsDream/ed_1024_1212kb.mp4
-
-#EXTINF:-1 tvg-name="Sample 7" group-title="Movies",Sample 7
-https://archive.org/download/ElephantsDream/ed_1024_1312kb.mp4
-
-#EXTINF:-1 tvg-name="Sample 8" group-title="Movies",Sample 8
-https://archive.org/download/ElephantsDream/ed_1024_1412kb.mp4
+#EXTINF:-1 tvg-name="Cosmos Laundromat" group-title="Movies",Cosmos Laundromat
+https://archive.org/download/CosmosLaundromatFirstCycle/Cosmos%20Laundromat%20-%20First%20Cycle%20%281080p%29.mp4

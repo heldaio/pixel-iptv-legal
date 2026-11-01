@@ -480,15 +480,24 @@ window.PIXEL_SITE = {
     var norm = function (s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); };
     var count = document.getElementById('faq-count');
     var empty = document.getElementById('faq-empty');
+    var psSample = document.querySelector('.ps');
+    var psHidden = !!psSample && getComputedStyle(psSample).display === 'none';
     var filter = window.__faqFilter = function () {
       var words = norm(search.value).split(/\s+/).filter(Boolean);
       var lang = currentLang() === 'pt' ? 'pt-PT' : 'en';
       var shown = 0;
       each('.faq-group', function (g) {
+        // Hidden by the stylesheet (Pixel Server until 2.5): never shown or counted.
+        g.hidden = false;
+        if (getComputedStyle(g).display === 'none') return;
         var any = false;
         each('details', function (d) {
           var txt = '';
-          each('[lang="' + lang + '"]', function (n) { txt += ' ' + n.textContent; }, d);
+          each('[lang="' + lang + '"]', function (n) {
+            var c = n.cloneNode(true);
+            each('.ps', function (p) { if (psHidden) p.remove(); }, c);
+            txt += ' ' + c.textContent;
+          }, d);
           var hay = norm(txt);
           var ok = words.every(function (w) { return hay.indexOf(w) !== -1; });
           d.hidden = !ok;
