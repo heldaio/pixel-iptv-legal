@@ -1105,11 +1105,3 @@ details.more > div { display: flex; flex-direction: column; gap: 10px; padding-b
   .site-header, .site-footer, .menu-btn, .river-wrap, .shelf-controls { display: none !important; }
   body { background: #fff; color: #000; }
 }
-
-/* ---------- Pixel Server hidden until 2.5 is on sale (README, «Before
-   publishing»). Launch day: delete this block. `.ps` marks every link,
-   section and phrase about it; `.ps-alt` is the wording used meanwhile. */
-.ps { display: none !important; }
-.ps-alt { display: inline !important; }
-.tiles:has(> .tile.ps) { grid-template-columns: minmax(0, 580px); justify-content: center; }
-/* ---------- end of the Pixel Server block */
