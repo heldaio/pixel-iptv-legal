@@ -77,6 +77,7 @@ window.PIXEL_SITE = {
     });
     updateThemeButton();
     refreshGlows();
+    buildGuide();
     if (window.__faqFilter) window.__faqFilter();
   }
   document.addEventListener('click', function (e) {
@@ -145,6 +146,48 @@ window.PIXEL_SITE = {
     var set = function () { if (img.currentSrc) amb.style.backgroundImage = 'url("' + img.currentSrc + '")'; };
     if (img.complete && img.currentSrc) set(); else img.addEventListener('load', set, { once: true });
   }
+  var GUIDE = {
+    en: [
+      ['Cineova', [['Line of Fire', 105], ['The Crossing', 100], ['The Watchmaker', 120], ['Echoes of Yesterday', 90]]],
+      ['Pipsy', [['Playtime', 45], ['Meadow Friends', 60], ['Forest Adventures', 120], ['Llama Tales', 30], ['Little Heroes', 60]]],
+      ['Elderwyn', [['Echoes of Yesterday', 90], ['The Last Lighthouse', 120], ['Inspector Lobo', 60], ['The Crossing', 105]]],
+      ['Fernlight', [['Woodland Life', 60], ['Wild Rivers', 120], ['Northern Wings', 60], ['The Meadow', 45], ['Andes Road', 75]]],
+      ['Torvo Sport', [['Matchday Review', 45], ['Cycling: Queen Stage', 90], ['Live: Grand Prix', 120], ['Cup Final', 105]]],
+      ['Quillon News', [['Markets Today', 30], ['Night Edition', 60], ['Breaking Now', 60], ['World Live', 45], ['Morning Briefing', 90]]],
+      ['Echoa', [['Rock Classics', 60], ['Weekly Countdown', 120], ['Live in Concert', 90], ['Acoustic Sessions', 60]]],
+      ['Wonderloom', [['The Lab', 45], ['Great Inventions', 60], ['Machines of Tomorrow', 75], ['Human Ingenuity', 60], ['Science Mysteries', 60]]]
+    ],
+    pt: [
+      ['Cineova', [['Linha de Fogo', 105], ['A Travessia', 100], ['O Relojoeiro', 120], ['Ecos do Passado', 90]]],
+      ['Pipsy', [['Hora do Recreio', 45], ['Amigos do Prado', 60], ['Aventuras na Floresta', 120], ['Contos do Lama', 30], ['Pequenos Heróis', 60]]],
+      ['Elderwyn', [['Ecos do Passado', 90], ['O Último Farol', 120], ['Inspetora Lobo', 60], ['A Travessia', 105]]],
+      ['Fernlight', [['Vida no Bosque', 60], ['Rios Selvagens', 120], ['Asas do Norte', 60], ['O Prado', 45], ['Estrada dos Andes', 75]]],
+      ['Torvo Sport', [['Resumo da Jornada', 45], ['Ciclismo: Etapa Rainha', 90], ['Direto: Grande Prémio', 120], ['Final da Taça', 105]]],
+      ['Quillon News', [['Economia Hoje', 30], ['Edição da Noite', 60], ['Última Hora', 60], ['Mundo em Direto', 45], ['Manhã Informativa', 90]]],
+      ['Echoa', [['Clássicos do Rock', 60], ['Top da Semana', 120], ['Concerto ao Vivo', 90], ['Sessões Acústicas', 60]]],
+      ['Wonderloom', [['Laboratório', 45], ['Grandes Invenções', 60], ['Máquinas do Futuro', 75], ['Engenho Humano', 60], ['Mistérios da Ciência', 60]]]
+    ]
+  };
+  function buildGuide() {
+    each('.epg-ambient', function (box) {
+      var rows = GUIDE[currentLang()];
+      var html = '<div class="epg-plane"><div class="epg-band"></div>';
+      rows.forEach(function (r, ri) {
+        var cells = '', start = 19 * 60 + (ri % 3) * 15;
+        for (var rep = 0; rep < 3; rep++) {
+          r[1].forEach(function (p) {
+            var hh = Math.floor(start / 60) % 24, mm = start % 60;
+            cells += '<div class="epg-c" style="width:' + (p[1] * 0.145).toFixed(2) + 'cqw"><b>' +
+              (hh < 10 ? '0' : '') + hh + ':' + (mm < 10 ? '0' : '') + mm + '</b>' + esc(p[0]) + '</div>';
+            start += p[1];
+          });
+        }
+        html += '<div class="epg-row" style="animation-duration:' + (150 + ri * 7) + 's">' + cells + cells + '</div>';
+      });
+      box.innerHTML = html + '<div class="epg-now"></div></div>';
+    });
+  }
+
   function refreshGlows() { each('.glow', refreshGlow); }
 
   /* ---------- Tabs — ARIA tabs with arrow keys (server.html) ---------- */

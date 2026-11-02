@@ -487,6 +487,70 @@ html:not(.js) .glow::before {
   .hero-side { display: none; }
 }
 
+/* ---------- home hero, two columns (web-v3 layout): copy on the left, the
+   device trio on the right — Apple TV at the back, iPad over its lower left,
+   iPhone in front at the lower right; all in % of the column (cqw). */
+.hero-split { padding: clamp(40px, 6vw, 88px) 0 clamp(48px, 6vw, 88px); }
+.hero-split .hero-grid { grid-template-columns: minmax(0, 4.4fr) minmax(0, 7.6fr); gap: clamp(28px, 4vw, 56px); }
+.hero-brand { display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
+.hero-brand .hero-icon { width: 56px; height: 56px; border-radius: 13px; margin: 0; }
+.hero-split .display { font-size: clamp(2.6rem, 1.2rem + 3.6vw, 4.6rem); font-weight: 700; line-height: 1; letter-spacing: -.04em; margin: 0; }
+.hero-split .cta-row { margin-top: 34px; }
+.hero-split .fine { margin: 18px 0 0; }
+.hero-art {
+  --bleed: clamp(0px, (100vw - var(--maxw)) / 2 - 24px, 110px);
+  position: relative; isolation: isolate; container-type: inline-size; aspect-ratio: 100 / 72;
+  margin-right: calc(-1 * var(--bleed));
+}
+.hero-art > div[class^="ha-"] { position: absolute; }
+.ha-tv { left: 9cqw; top: 0; width: 91cqw; }
+.ha-ipad { left: 0; bottom: 0; width: 52cqw; z-index: 2; }
+.ha-iphone { right: 1cqw; bottom: 0; width: 20cqw; z-index: 3; }
+.ha-ipad .dev, .ha-iphone .dev { box-shadow: inset 0 1px 0 var(--bezel-edge), 0 0 0 1px var(--bezel-edge), 0 40px 70px -24px rgb(0 0 0 / .75); }
+.ha-ipad .dev { --bz: 1.5cqw; --rad: 3.4cqw; }
+.ha-iphone .dev { --bz: 1.1cqw; --rad: 4.6cqw; }
+.ha-tv .dev { --bz: 1cqw; --rad: 1.6cqw; }
+.hero-art::after {
+  content: ""; position: absolute; z-index: -1; left: 4%; right: 2%; bottom: -3%; height: 20%;
+  background: radial-gradient(closest-side, rgb(128 217 0 / .26), transparent); filter: blur(24px);
+}
+/* The guide, slowly passing behind the devices (decorative, fictional). */
+.epg-ambient {
+  position: absolute; z-index: -1; left: -24cqw; right: -24cqw; top: 33cqw; height: 84cqw; opacity: .6;
+  perspective: 100cqw; perspective-origin: 50% 0%; pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 52% 42% at 58% 22%, #000 35%, transparent 80%);
+  mask-image: radial-gradient(ellipse 52% 42% at 58% 22%, #000 35%, transparent 80%);
+}
+.epg-plane { position: absolute; inset: 0; transform: rotateX(62deg); transform-origin: 50% 0; }
+.epg-row { display: flex; gap: .6cqw; height: 4cqw; margin-bottom: .6cqw; width: max-content; animation: epg-drift 160s linear infinite; }
+.epg-row:nth-child(even) { margin-left: -12cqw; }
+.epg-c {
+  flex: none; height: 100%; padding: 0 1.3cqw; border-radius: .9cqw; display: flex; align-items: center;
+  background: rgb(255 255 255 / .035); border: 1px solid rgb(255 255 255 / .07);
+  color: rgb(255 255 255 / .42); font: 600 1.4cqw/1 var(--font); white-space: nowrap; overflow: hidden;
+}
+.epg-c b { color: rgb(255 255 255 / .62); font-weight: 650; margin-right: .8cqw; }
+.epg-now {
+  position: absolute; z-index: 2; left: 55%; top: -2%; bottom: 0; width: 2px;
+  background: linear-gradient(var(--accent), rgb(128 217 0 / 0));
+  box-shadow: 0 0 18px 3px rgb(128 217 0 / .55);
+}
+.epg-band { position: absolute; left: 46%; right: 36%; top: 0; bottom: 0; background: linear-gradient(90deg, transparent, rgb(128 217 0 / .07), transparent); }
+@keyframes epg-drift { to { transform: translateX(-50%); } }
+:root[data-theme="light"] .epg-c { background: rgb(0 0 0 / .035); border-color: rgb(0 0 0 / .07); color: rgb(0 0 0 / .45); }
+:root[data-theme="light"] .epg-c b { color: rgb(0 0 0 / .7); }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .epg-c { background: rgb(0 0 0 / .035); border-color: rgb(0 0 0 / .07); color: rgb(0 0 0 / .45); }
+  :root:not([data-theme="dark"]) .epg-c b { color: rgb(0 0 0 / .7); }
+}
+@media (prefers-reduced-motion: reduce) { .epg-row { animation: none; } }
+@media (max-width: 900px) {
+  .hero-split .hero-grid { grid-template-columns: 1fr; gap: clamp(36px, 7vw, 56px); }
+  .hero-art { max-width: 820px; margin-inline: auto; width: 100%; --bleed: 0px; }
+  .hero-split .hero-art { width: calc(100% + var(--gutter)); margin-left: calc(-.5 * var(--gutter)); }
+  .epg-ambient { left: -10cqw; right: -10cqw; }
+}
+
 /* ---------- sticky story */
 .story-stage { display: none; }
 .story-steps { display: grid; gap: clamp(64px, 9vw, 104px); max-width: 640px; margin-inline: auto; }
