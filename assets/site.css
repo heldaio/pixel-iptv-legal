@@ -492,8 +492,11 @@ html:not(.js) .glow::before {
    iPhone in front at the lower right; all in % of the column (cqw). */
 .hero-split { padding: clamp(40px, 6vw, 88px) 0 clamp(48px, 6vw, 88px); }
 .hero-split .hero-grid { grid-template-columns: minmax(0, 4.4fr) minmax(0, 7.6fr); gap: clamp(28px, 4vw, 56px); }
-.hero-brand { display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
-.hero-brand .hero-icon { width: 56px; height: 56px; border-radius: 13px; margin: 0; }
+.hero-split .hero-devices { margin-bottom: 26px; }
+.link-arrow { display: inline-flex; align-items: center; gap: 6px; font-size: 17px; font-weight: 600; color: var(--accent-text); }
+.link-arrow .i { width: 18px; height: 18px; transition: transform .25s var(--ease); }
+.link-arrow:hover { text-decoration: none; }
+.link-arrow:hover .i { transform: translateX(3px); }
 .hero-split .display { font-size: clamp(2.6rem, 1.2rem + 3.6vw, 4.6rem); font-weight: 700; line-height: 1; letter-spacing: -.04em; margin: 0; }
 .hero-split .cta-row { margin-top: 34px; }
 .hero-split .fine { margin: 18px 0 0; }

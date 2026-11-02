@@ -29,7 +29,7 @@
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script>(function(){var d=document.documentElement,l=null,m=null;d.className+=' js';try{var q=new URLSearchParams(location.search),p=q.get('lang');m=q.get('theme');if(p==='pt'||p==='en')localStorage.setItem('pixel-iptv-lang',p);l=localStorage.getItem('pixel-iptv-lang');if(m!=='light'&&m!=='dark')m=localStorage.getItem('pixel-iptv-theme')}catch(e){}if(m==='light'||m==='dark')d.setAttribute('data-theme',m);if(l!=='pt'&&l!=='en'){l='en';var a=navigator.languages||[navigator.language||''];for(var i=0;i<a.length;i++){if(/^pt/i.test(a[i])){l='pt';break}if(/^en/i.test(a[i]))break}}d.lang=l==='pt'?'pt-PT':'en'})()</script>
-<link rel="stylesheet" href="assets/site.css?v=20261102a">
+<link rel="stylesheet" href="assets/site.css?v=20261102b">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pixel IPTV", "alternateName": "Pixel IPTV: Player M3U Xtream", "applicationCategory": "EntertainmentApplication", "operatingSystem": "iOS 17.6, iPadOS 17.6, tvOS 17", "softwareVersion": "2.5", "url": "https://www.pixeliptv.pt/", "downloadUrl": "https://apps.apple.com/app/id6773107337", "installUrl": "https://apps.apple.com/app/id6773107337", "image": "https://www.pixeliptv.pt/assets/img/app-icon-512.png", "screenshot": "https://www.pixeliptv.pt/assets/img/en/iphone-home-920.jpg", "author": {"@type": "Organization", "name": "HDAIO"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "description": "Pixel IPTV is a media player for iPhone, iPad and Apple TV. Add your own M3U playlist or Xtream Codes login. It provides no channels, playlists or content."}</script>
 </head>
 <body>
@@ -57,12 +57,13 @@
   <section class="hero hero-split" aria-labelledby="hero-h">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <div class="hero-brand"><img class="hero-icon" src="assets/img/app-icon-128.png" width="96" height="96" alt=""><h1 class="eyebrow-h1">Pixel IPTV</h1></div>
+        <h1 class="sr-only">Pixel IPTV</h1>
+        <p class="hero-devices"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.6"/><path d="M10.5 5h3"/></svg> iPhone <i></i> <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2.4"/><path d="M11 18.5h2"/></svg> iPad <i></i> <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="12.5" rx="1.8"/><path d="M8.5 20h7M12 16.5V20"/></svg> Apple TV</p>
         <h2 id="hero-h" class="display"><span lang="pt-PT">Tudo o que precisas, <br>numa só app.</span><span lang="en">Everything you need, <br>in one app.</span></h2>
         <p class="lede"><span lang="pt-PT">Junta a tua lista M3U ou a conta Xtream do teu fornecedor. Canais em direto com guia, filmes e séries bem arrumados e um Início à tua medida, no iPhone, no iPad e na Apple TV.</span><span lang="en">Add your M3U playlist or your provider’s Xtream login. Live channels with a guide, films and series neatly sorted, and a Home screen made your way, on iPhone, iPad and Apple TV.</span></p>
         <div class="cta-row">
         <a class="badge-link" href="https://apps.apple.com/app/id6773107337" rel="noopener"><img class="b-dark" lang="pt-PT" src="assets/badges/app-store-pt-white.svg" width="150" height="50" alt="Descarregar na App Store" loading="lazy"><img class="b-dark" lang="en" src="assets/badges/app-store-en-white.svg" width="150" height="50" alt="Download on the App Store" loading="lazy"><img class="b-light" lang="pt-PT" src="assets/badges/app-store-pt.svg" width="150" height="50" alt="Descarregar na App Store" loading="lazy"><img class="b-light" lang="en" src="assets/badges/app-store-en.svg" width="150" height="50" alt="Download on the App Store" loading="lazy"></a>
-        <a class="more ps" href="server.html"><span lang="pt-PT">Conhecer o Pixel Server</span><span lang="en">Meet Pixel Server</span> <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M3 1.5L6.5 5 3 8.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="link-arrow ps" href="server.html"><span lang="pt-PT">Conhecer o Pixel Server</span><span lang="en">Meet Pixel Server</span> <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
         <p class="fine"><span lang="pt-PT">Grátis para ver, sem limite de tempo. Traz a tua própria lista.</span><span lang="en">Free to watch, with no time limit. Bring your own playlist.</span><sup class="fn"><a href="#nota-1" id="ref-1" data-aria-pt="Nota 1" data-aria-en="Note 1" aria-label="Note 1">1</a></sup></p>
       </div>
@@ -432,6 +433,6 @@
     </div>
   </div>
 </footer>
-<script src="assets/site.js?v=20261102a" defer></script>
+<script src="assets/site.js?v=20261102b" defer></script>
 </body>
 </html>
