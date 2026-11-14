@@ -29,7 +29,7 @@
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script>(function(){var d=document.documentElement,l=null,m=null;d.className+=' js';try{var q=new URLSearchParams(location.search),p=q.get('lang');m=q.get('theme');if(p==='pt'||p==='en')localStorage.setItem('pixel-iptv-lang',p);l=localStorage.getItem('pixel-iptv-lang');if(m!=='light'&&m!=='dark')m=localStorage.getItem('pixel-iptv-theme')}catch(e){}if(m==='light'||m==='dark')d.setAttribute('data-theme',m);if(l!=='pt'&&l!=='en'){l='en';var a=navigator.languages||[navigator.language||''];for(var i=0;i<a.length;i++){if(/^pt/i.test(a[i])){l='pt';break}if(/^en/i.test(a[i]))break}}d.lang=l==='pt'?'pt-PT':'en'})()</script>
-<link rel="stylesheet" href="assets/site.css?v=20261102b">
+<link rel="stylesheet" href="assets/site.css?v=20261114a">
 </head>
 <body>
 <a class="skip" href="#main"><span lang="pt-PT">Saltar para o conteúdo</span><span lang="en">Skip to content</span></a>
@@ -88,13 +88,29 @@
                 for an episode, and your IP. It does not receive personal information about you. Contains information from <a href="https://skipdb.tv">SkipDB</a>, made
                 available under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License
                 (ODbL)</a>.</li>
+            <li><strong>TVmaze (tvmaze.com)</strong> — consulted to complete the TV guide (an episode’s season and
+                number, title, synopsis and picture where your guide has none) and, on a Video Club series’ page, for
+                the date of its next episode. It receives a country and a date, or the series’ IMDb ID, and your IP.
+                It does not receive personal information about you. Contains information from
+                <a href="https://www.tvmaze.com">TVmaze</a>, made available under the
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+                licence (CC BY-SA 4.0)</a>. Off with Settings › Metadata Source › Disabled.</li>
+            <li><strong>fanart.tv</strong> — consulted through our metadata proxy for a film’s or series’ title logo and
+                backdrop when TVDB has none, or has none in your language. The request carries only the series’ TVDB ID or the
+                film’s IMDb ID; the images themselves load from fanart.tv’s servers, which see your IP. Images from
+                <a href="https://fanart.tv">fanart.tv</a>.</li>
+            <li><strong>Wikidata and Wikimedia Commons</strong> — when you open a programme that looks like a film, its
+                title is looked up on <a href="https://www.wikidata.org">Wikidata</a> to know which film it is (its IMDb
+                ID then goes to TVDB as above); a channel without a logo may show its logo from Wikimedia Commons
+                (public-domain logos only), loaded from Wikimedia’s servers. They receive the title or the image request
+                and your IP — no personal information about you. Wikidata’s data is CC0.</li>
             <li><strong>Trakt.tv (optional)</strong> — contacted only if you authorize the connection in Settings.</li>
             <li><strong>Your IPTV provider</strong> — all playback flows directly from your device to the stream URL you
                 configured.</li>
         </ul>
 
         <h2>4. Metadata proxy</h2>
-        <p>By default, TVDB requests pass through a proxy service operated by us (Cloudflare Workers) that only
+        <p>By default, TVDB and fanart.tv requests pass through a proxy service operated by us (Cloudflare Workers) that only
             rewrites the URL and injects our API key. This proxy does not store your requests, does not log your IP, and
             does not associate requests with any identity. TMDB only works if you supply your own API key in Settings —
             those requests go directly from your device to TMDB.</p>
@@ -146,6 +162,22 @@
                 episódio num episódio, e o teu IP. Não recebe informação pessoal tua. Contém informação do <a href="https://skipdb.tv">SkipDB</a>, disponibilizada
                 ao abrigo da <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License
                 (ODbL)</a>.</li>
+            <li><strong>TVmaze (tvmaze.com)</strong> — consultado para completar o guia de TV (a temporada e o número
+                de um episódio, o título, a sinopse e a imagem quando o teu guia não os tem) e, na página de uma série
+                do Videoclube, para a data do próximo episódio. Recebe um país e uma data, ou o código IMDb da série, e
+                o teu IP. Não recebe informação pessoal tua. Contém informação do <a href="https://www.tvmaze.com">TVmaze</a>,
+                disponibilizada ao abrigo da licença <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Atribuição-CompartilhaIgual 4.0 (CC BY-SA 4.0)</a>. Desliga-se em Definições › Fonte de
+                Metadados › Desligado.</li>
+            <li><strong>fanart.tv</strong> — consultado através do nosso proxy de metadados para o logótipo do título e
+                a imagem de fundo de um filme ou série quando o TVDB não os tem, ou não os tem na tua língua. O pedido leva
+                só o código TVDB da série ou o código IMDb do filme; as imagens vêm dos servidores do fanart.tv, que veem o teu IP. Imagens do
+                <a href="https://fanart.tv">fanart.tv</a>.</li>
+            <li><strong>Wikidata e Wikimedia Commons</strong> — quando abres um programa que parece um filme, o título é
+                procurado no <a href="https://www.wikidata.org">Wikidata</a> para saber que filme é (o código IMDb vai
+                depois para o TVDB, como acima); um canal sem logótipo pode mostrar o seu logótipo do Wikimedia Commons
+                (só logótipos em domínio público), descarregado dos servidores da Wikimedia. Recebem o título ou o pedido
+                da imagem e o teu IP — nenhuma informação pessoal tua. Os dados do Wikidata são CC0.</li>
             <li><strong>Trakt.tv (opcional)</strong> — só é contactado se autorizares a ligação nas Definições.</li>
             <li><strong>O teu fornecedor de IPTV</strong> — toda a reprodução passa diretamente do teu dispositivo para
                 a URL de stream que tu configuraste.</li>
@@ -219,6 +251,6 @@
     </div>
   </div>
 </footer>
-<script src="assets/site.js?v=20261102b" defer></script>
+<script src="assets/site.js?v=20261114a" defer></script>
 </body>
 </html>

@@ -3,6 +3,16 @@
     <channel>
         <title>Pixel Server</title>
         <item>
+            <title>1.1</title>
+            <pubDate>Sat, 14 Nov 2026 15:56:32 +0000</pubDate>
+            <link>https://www.pixeliptv.pt/server.html</link>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.1/PixelServer-1.1.dmg" length="5861087" type="application/octet-stream" sparkle:edSignature="HTzX4VLe4citKk9s1tbiBbf6t1/FZ5GhvSH5YcKwea4We0OhokXtZab3c/YgyXrJ8oawIv5wP36WNmZabs4CDA=="/>
+        </item>
+        <item>
             <title>1.0</title>
             <pubDate>Sat, 31 Oct 2026 23:04:21 +0000</pubDate>
             <link>https://www.pixeliptv.pt/server.html</link>

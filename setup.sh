@@ -22,8 +22,8 @@
 #
 set -eu
 
-VERSION=1.0
-DOWNLOADS="${PIXEL_DOWNLOADS:-https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.0}"
+VERSION=1.1
+DOWNLOADS="${PIXEL_DOWNLOADS:-https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.1}"
 
 PREFIX=/opt/pixel-server
 ETC=/etc/pixel-server

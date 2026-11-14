@@ -591,6 +591,11 @@ html:not(.js) .glow::before {
 .shelf-card p { margin: 0; max-width: 46ch; color: var(--text-2); }
 @media (min-width: 735px) { .shelf-card { width: 70vw; } }
 @media (min-width: 1068px) { .shelf-card { width: 980px; } }
+
+/* A portrait iPhone in the player's shelf (the radio bar, 2.7): as tall as
+   the landscape shots beside it, not as wide. */
+.shelf-card-phone .glow { width: min(62vw, 320px); }
+.shelf-card-phone .dev.iphone { --bz: clamp(4px, .55vw, 7px); --rad: clamp(16px, 2.3vw, 28px); }
 .shelf-controls { display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-top: 8px; }
 .paddle {
   display: inline-grid; place-items: center; width: 36px; height: 36px; padding: 0; border-radius: 50%; cursor: pointer;

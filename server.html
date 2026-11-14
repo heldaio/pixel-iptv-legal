@@ -30,7 +30,7 @@
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script>(function(){var d=document.documentElement,l=null,m=null;d.className+=' js';try{var q=new URLSearchParams(location.search),p=q.get('lang');m=q.get('theme');if(p==='pt'||p==='en')localStorage.setItem('pixel-iptv-lang',p);l=localStorage.getItem('pixel-iptv-lang');if(m!=='light'&&m!=='dark')m=localStorage.getItem('pixel-iptv-theme')}catch(e){}if(m==='light'||m==='dark')d.setAttribute('data-theme',m);if(l!=='pt'&&l!=='en'){l='en';var a=navigator.languages||[navigator.language||''];for(var i=0;i<a.length;i++){if(/^pt/i.test(a[i])){l='pt';break}if(/^en/i.test(a[i]))break}}d.lang=l==='pt'?'pt-PT':'en'})()</script>
-<link rel="stylesheet" href="assets/site.css?v=20261102b">
+<link rel="stylesheet" href="assets/site.css?v=20261114a">
 </head>
 <body>
 <a class="skip" href="#main"><span lang="pt-PT">Saltar para o conteúdo</span><span lang="en">Skip to content</span></a>
@@ -65,7 +65,7 @@
           <a class="btn btn-primary" href="#transferir"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg> <span lang="pt-PT">Descarregar</span><span lang="en">Download</span></a>
           <a class="btn btn-ghost" href="#como"><span lang="pt-PT">Como funciona</span><span lang="en">How it works</span></a>
         </div>
-        <p class="hero-note"><span lang="pt-PT">Versão <span data-version>1.0</span> · Funciona com a Pixel IPTV 2.5 ou mais recente</span><span lang="en">Version <span data-version>1.0</span> · Works with Pixel IPTV 2.5 or later</span></p>
+        <p class="hero-note"><span lang="pt-PT">Versão <span data-version>1.1</span> · Funciona com a Pixel IPTV 2.5 ou mais recente</span><span lang="en">Version <span data-version>1.1</span> · Works with Pixel IPTV 2.5 or later</span></p>
       </div>
       <div class="admin-art">
         <div class="aa-desk glow"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Pixel Server</span></div><picture lang="pt-PT"><source type="image/webp" srcset="assets/img/pt/server-admin-900.webp 900w, assets/img/pt/server-admin-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 640px"><img src="assets/img/pt/server-admin-900.jpg" srcset="assets/img/pt/server-admin-900.jpg 900w, assets/img/pt/server-admin-1600.jpg 1600w" sizes="(max-width: 900px) 92vw, 640px" width="900" height="419" alt="Página de gestão do Pixel Server no computador: estado, espaço livre e gravações (conteúdo de demonstração)" loading="lazy" fetchpriority="high" decoding="async" data-hero></picture><picture lang="en"><source type="image/webp" srcset="assets/img/en/server-admin-900.webp 900w, assets/img/en/server-admin-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 640px"><img src="assets/img/en/server-admin-900.jpg" srcset="assets/img/en/server-admin-900.jpg 900w, assets/img/en/server-admin-1600.jpg 1600w" sizes="(max-width: 900px) 92vw, 640px" width="900" height="419" alt="Pixel Server admin page on a computer: status, free space and recordings (demo content)" loading="lazy" fetchpriority="high" decoding="async" data-hero></picture></div></div>
@@ -172,7 +172,7 @@
             <div class="code-wrap"><pre class="code" id="compose-linux"><span class="c"><span lang="pt-PT"># compose.yml — Linux ou NAS</span><span lang="en"># compose.yml — Linux or a NAS</span></span>
 <span class="k">services:</span>
   <span class="k">pixel-server:</span>
-    image: <span class="ph" data-docker-image>&lt;registry&gt;/pixel-server:1.0</span>
+    image: <span class="ph" data-docker-image>&lt;registry&gt;/pixel-server:1.1</span>
     container_name: pixel-server
     network_mode: host
     restart: unless-stopped
@@ -300,6 +300,6 @@ docker logs pixel-server</pre><button class="copy-btn" type="button" data-copy="
     </div>
   </div>
 </footer>
-<script src="assets/site.js?v=20261102b" defer></script>
+<script src="assets/site.js?v=20261114a" defer></script>
 </body>
 </html>

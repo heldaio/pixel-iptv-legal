@@ -11,38 +11,38 @@
 window.PIXEL_SITE = {
   appStoreURL: 'https://apps.apple.com/app/id6773107337',
   server: {
-    version: '1.0',
+    version: '1.1',
     // Docker image name shown in the compose examples on server.html.
-    // Published 2026-10-31 on GitHub Container Registry (linux/amd64 +
+    // 1.1 published 2026-11-14 on GitHub Container Registry (linux/amd64 +
     // linux/arm64, also tagged :latest). Empty: the page shows the
     // «not published yet» note instead.
-    dockerImage: 'ghcr.io/heldaio/pixel-server:1.0',
+    dockerImage: 'ghcr.io/heldaio/pixel-server:1.1',
     // Every file lives flat in downloads/ next to server.html, served at
-    // https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.0/<file>. A button stays «Em breve» /
+    // https://github.com/heldaio/pixel-iptv-legal/releases/download/server-<version>/<file>. A button stays «Em breve» /
     // "Coming soon" while its url is empty. size is what people read
     // (MiB, rounded); sha256 is of the published file itself.
     downloads: {
-      // Mac (Apple silicon, macOS 14+), menu-bar app. Built 2026-10-31 by
+      // Mac (Apple silicon, macOS 14+), menu-bar app. 1.1 built 2026-11-14 by
       // PixelServer/Mac/make-dmg.sh: Developer ID, notarized and stapled
-      // (5 752 818 bytes). Updates: downloads/appcast.xml (Sparkle, signed
+      // (5 861 087 bytes). Updates: downloads/appcast.xml (Sparkle, signed
       // with the EdDSA key in the developer's keychain; generate_appcast).
-      macos:        { url: 'https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.0/PixelServer-1.0.dmg', size: '5 MB', sha256: 'dac43cef24db732f0ccac7e5fb0b0ecd6d4f3c9e905b6c4b177afba9b0f43a1d', file: 'PixelServer-1.0.dmg' },
-      // Windows 10 (1903+) / 11 installers, built 2026-10-31 by
+      macos:        { url: 'https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.1/PixelServer-1.1.dmg', size: '6 MB', sha256: '3188f2649067c69a39dbf248128f1d632c5d5d7322c47303a64c0851bbdba26b', file: 'PixelServer-1.1.dmg' },
+      // Windows 10 (1903+) / 11 installers, built 2026-11-14 by
       // PixelServer/Windows/build.ps1 (Inno Setup; not Authenticode-signed yet).
-      // x64 21 731 473 bytes, arm64 20 855 791 bytes.
-      windowsX64:   { url: 'https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.0/PixelServer-1.0-windows-x64.exe', size: '21 MB',
-                      sha256: 'a2037fe74e904478a50c5df3eb1849b24ecf52e38ce205b6bda7509788480259', file: 'PixelServer-1.0-windows-x64.exe' },
-      windowsArm64: { url: 'https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.0/PixelServer-1.0-windows-arm64.exe', size: '20 MB',
-                      sha256: 'c577ff66f7d8839ba352b06d71f0c77ab180a16638be8086a4b700c61f33e205', file: 'PixelServer-1.0-windows-arm64.exe' },
-      // Linux (systemd), built 2026-10-31 by
-      // PIXEL_PUBLISH_URL=https://www.pixeliptv.pt/downloads PixelServer/Docker/make-tarball.sh
-      // amd64 28 259 710 bytes, arm64 27 000 825 bytes. Its dist/setup.sh is
+      // x64 23 672 731 bytes, arm64 22 725 593 bytes.
+      windowsX64:   { url: 'https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.1/PixelServer-1.1-windows-x64.exe', size: '23 MB',
+                      sha256: 'b3a5d0a1e366a0847ba653f4d2af865e030b3bbaeebf832c2364ea4c3d52616d', file: 'PixelServer-1.1-windows-x64.exe' },
+      windowsArm64: { url: 'https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.1/PixelServer-1.1-windows-arm64.exe', size: '22 MB',
+                      sha256: '43cc63d1f38ef18eb1358850c47638b31895a18a8ddb52888336b6f61efbe51c', file: 'PixelServer-1.1-windows-arm64.exe' },
+      // Linux (systemd), built 2026-11-14 by
+      // PIXEL_PUBLISH_URL=<the release folder> PixelServer/Docker/make-tarball.sh
+      // amd64 29 080 543 bytes, arm64 27 780 526 bytes. Its dist/setup.sh is
       // published as /setup.sh (the page's one-command install) and fetches
-      // downloads/<file> plus downloads/<file>.sha256 — keep both published.
-      linuxAmd64:   { url: 'https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.0/pixel-server-1.0-linux-amd64.tar.gz', size: '27 MB',
-                      sha256: '4e9441561b3b7ef2e3b9409e1aa1f5e3885d589c70b24a28ef351a0202b8732f', file: 'pixel-server-1.0-linux-amd64.tar.gz' },
-      linuxArm64:   { url: 'https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.0/pixel-server-1.0-linux-arm64.tar.gz', size: '26 MB',
-                      sha256: '82e462dae4201bd491475034090e4bee4fff7db52c9de39d22b4519f715c1b1d', file: 'pixel-server-1.0-linux-arm64.tar.gz' }
+      // <file> plus <file>.sha256 from the release — keep both published.
+      linuxAmd64:   { url: 'https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.1/pixel-server-1.1-linux-amd64.tar.gz', size: '28 MB',
+                      sha256: '5fc0f6e308f7efc2aba989514f4c77122e16d2ab5babf294c7f82cadd6585333', file: 'pixel-server-1.1-linux-amd64.tar.gz' },
+      linuxArm64:   { url: 'https://github.com/heldaio/pixel-iptv-legal/releases/download/server-1.1/pixel-server-1.1-linux-arm64.tar.gz', size: '27 MB',
+                      sha256: '6472bfed405ec6b0c4dcd7ae87c1c8816ae967589a9111d1b304764cb91d1dbe', file: 'pixel-server-1.1-linux-arm64.tar.gz' }
     }
   }
 };
