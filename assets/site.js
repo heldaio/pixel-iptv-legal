@@ -78,6 +78,7 @@ window.PIXEL_SITE = {
     updateThemeButton();
     refreshGlows();
     buildGuide();
+    syncLoops();
     if (window.__faqFilter) window.__faqFilter();
   }
   document.addEventListener('click', function (e) {
@@ -276,6 +277,7 @@ window.PIXEL_SITE = {
       steps.forEach(function (s) { s.toggleAttribute('data-active', s.getAttribute('data-step') === n); });
       each('.story-shot', function (s) { s.toggleAttribute('data-active', s.getAttribute('data-step') === n); }, story);
       if (stage) refreshGlow(stage);
+      syncLoops();
     }
     function setup() {
       if (sio) { sio.disconnect(); sio = null; }
@@ -289,6 +291,46 @@ window.PIXEL_SITE = {
     activate('1');
     setup();
     listen(mq, setup);
+  })();
+
+  /* ---------- Looping clips (the iPad Guide): loaded and played only when seen ----------
+     Only the visible language's, only in view, only on the story's active
+     step, never with reduced motion (the still under it stays). */
+  var loops = null;
+  function syncLoops() {
+    if (!loops) return;
+    loops.forEach(function (x) {
+      var v = x.v;
+      var shot = v.closest('.story-shot');
+      var want = x.seen && !reduceMotion.matches && !document.hidden &&
+        v.getClientRects().length > 0 && (!shot || shot.hasAttribute('data-active'));
+      if (want) {
+        if (!v.getAttribute('src')) v.setAttribute('src', v.getAttribute('data-src'));
+        var p = v.play();
+        if (p && p.catch) p.catch(function () {});
+      } else if (!v.paused) {
+        v.pause();
+      }
+      if (reduceMotion.matches) v.classList.remove('on');
+    });
+  }
+  (function () {
+    var vids = document.querySelectorAll('video.loop');
+    if (!vids.length || !hasIO) return;
+    loops = Array.prototype.map.call(vids, function (v) {
+      v.muted = true;
+      v.addEventListener('playing', function () { v.classList.add('on'); });
+      return { v: v, seen: false };
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        loops.forEach(function (x) { if (x.v === en.target) x.seen = en.isIntersecting; });
+      });
+      syncLoops();
+    }, { threshold: 0.35 });
+    loops.forEach(function (x) { io.observe(x.v); });
+    listen(reduceMotion, syncLoops);
+    document.addEventListener('visibilitychange', syncLoops);
   })();
 
   /* ---------- Shelf: paddles, dots, arrow keys ---------- */

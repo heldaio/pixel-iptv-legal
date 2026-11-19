@@ -362,6 +362,11 @@ sup.fn a:hover { color: var(--accent-text); text-decoration: underline; }
 }
 .dev .screen { position: relative; overflow: hidden; background: #000; isolation: isolate; border-radius: calc(var(--rad) - var(--bz)); }
 .dev .screen picture, .dev .screen img { width: 100%; height: 100%; object-fit: cover; }
+/* A screen's looping clip (the iPad Guide), over its still: shown once it
+   plays; the still stays when motion is reduced or the clip never loads. */
+.dev .screen video.loop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .3s ease; pointer-events: none; }
+.dev .screen video.loop.on { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .dev .screen video.loop { display: none; } }
 @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
 .dev.tv { --bz: var(--bz-tv); --rad: var(--rad-tv); }
 .dev.tv .screen { aspect-ratio: 16 / 9; }
